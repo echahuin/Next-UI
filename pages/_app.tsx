@@ -1,7 +1,12 @@
 import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }: AppProps) {
+interface PageProps {
+  title: string;
+  subtitle: string;
+}
+
+function MyApp({ Component, pageProps }:  AppProps<PageProps>) {
   return <Component {...pageProps} />
 }
 
